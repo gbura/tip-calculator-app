@@ -1,6 +1,9 @@
 :root {
 	--s-cyan: hsl(172, 67%, 45%);
 	--vd-cyan: hsl(183, 100%, 15%);
+	--hover: hsl(183, 96%, 18%);
+	--hover2: hsl(172, 67%, 50%);
+	--hover3: hsl(186, 23%, 73%);
 	--dg-cyan: hsl(186, 14%, 43%);
 	--g-cyan: hsl(184, 14%, 56%);
 	--lg-cyan: hsl(185, 41%, 84%);
@@ -47,6 +50,7 @@ body {
 	padding: 3rem 3rem;
 	background-color: var(--white);
 	border-radius: 15px;
+	box-shadow: 0 0 10px rgb(83, 82, 82);
 }
 
 .left-section {
@@ -113,6 +117,14 @@ body {
 	background-color: var(--lg-cyan);
 	color: var(--vd-cyan);
 	font-weight: bold;
+}
+
+.percentage:hover {
+	background-color: var(--hover);
+}
+
+.percentage:last-child:hover {
+	background-color: var(--hover3);
 }
 
 .percentage.active {
@@ -196,6 +208,10 @@ body {
 	color: var(--vd-cyan);
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.reset:hover {
+	background-color: var(--hover2);
 }
 
 @media (max-width: 575px) {
