@@ -1,0 +1,214 @@
+:root {
+	--s-cyan: hsl(172, 67%, 45%);
+	--vd-cyan: hsl(183, 100%, 15%);
+	--dg-cyan: hsl(186, 14%, 43%);
+	--g-cyan: hsl(184, 14%, 56%);
+	--lg-cyan: hsl(185, 41%, 84%);
+	--vlg-cyan: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	font-family: 'Space Mono', monospace;
+	min-height: 100vh;
+	background-color: var(--lg-cyan);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 1020px;
+}
+
+.logo {
+	margin-bottom: 5rem;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 3rem 3rem;
+	background-color: var(--white);
+	border-radius: 15px;
+}
+
+.left-section {
+	width: 50%;
+}
+
+.bill,
+.people-number {
+	position: relative;
+}
+
+.bill-text {
+	color: var(--vd-cyan);
+}
+
+.bill-input {
+	width: 90%;
+	padding: 0.5rem 0;
+	margin-bottom: 1rem;
+	border: none;
+	background-color: var(--vlg-cyan);
+	direction: rtl;
+}
+
+.bill-input::placeholder,
+.people-number-input::placeholder {
+	text-align: right;
+	margin-right: 1rem;
+	font-family: 'Space Mono', monospace;
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--g-cyan);
+}
+
+.icon {
+	position: absolute;
+	left: 1rem;
+	bottom: 1.5rem;
+}
+
+.select-tip {
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+.tip-text {
+	color: var(--vd-cyan);
+	margin-bottom: 2rem;
+}
+
+.percentage {
+	width: 30%;
+	height: 30px;
+	margin-bottom: 1rem;
+	border: none;
+	background-color: var(--vd-cyan);
+	border-radius: 5px;
+	color: var(--white);
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.percentage:last-child {
+	background-color: var(--lg-cyan);
+	color: var(--vd-cyan);
+	font-weight: bold;
+}
+
+.percentage.active {
+	background-color: var(--s-cyan);
+	color: var(--vd-cyan);
+	font-weight: bold;
+}
+
+.people-number-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.people-number-text {
+	color: var(--vd-cyan);
+}
+
+.error {
+	display: none;
+	color: red;
+	font-size: 1rem;
+}
+
+.people-number-input {
+	width: 90%;
+	padding: 0.5rem 0;
+	margin-bottom: 1rem;
+	border: none;
+	background-color: var(--vlg-cyan);
+	direction: rtl;
+}
+
+.right-section {
+	width: 50%;
+	margin-left: 2rem;
+}
+
+.result-box {
+	background-color: var(--vd-cyan);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 3rem 3rem;
+	border-radius: 15px;
+}
+
+.tip-amount-box {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+}
+
+.tip-amount-text,
+.total-amount-text {
+	color: var(--white);
+}
+
+.tip-amount-small-text {
+	color: var(--g-cyan);
+	font-size: 1.4rem;
+}
+
+.tip-amount-price,
+.total-amount-price {
+	display: flex;
+	align-items: center;
+}
+
+.tip-amount-price-text,
+.total-amount-price-text {
+	color: var(--s-cyan);
+	font-size: 3rem;
+}
+
+.reset {
+	margin-top: 3rem;
+	padding: 1rem 1rem;
+	border-radius: 5px;
+	background-color: var(--s-cyan);
+	border: none;
+	color: var(--vd-cyan);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+@media (max-width: 575px) {
+	.box {
+		flex-direction: column;
+	}
+
+	.left-section {
+		width: 100%;
+	}
+
+	.right-section {
+		width: 100%;
+		margin-left: 0;
+	}
+}
